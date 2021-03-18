@@ -1,27 +1,28 @@
 programa
 {
+	
+	funcao inicio()
+	{
+		real N
 
+		escreva("Insira seu número: ")
+		leia(N)
 
-    funcao inicio()
-    {
-        inteiro ano,mes,dia,dias
-
-        escreva("digite quantos dias você viveu: ")
-        leia(dia)
-        ano = dia / 365
-        mes = dia % 365 / 30
-        dias= dia % 365 % 30
-
-        escreva("Você viveu por: ", ano, " anos ", mes, " meses ", "e ",dias, " dias")
-
-    }
+		se(N <= 100) {
+			inteiro zero =  0
+			escreva(zero)
+			}
+		senao {
+			escreva(N)
+			}
+	}
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 188; 
+ * @POSICAO-CURSOR = 44; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
