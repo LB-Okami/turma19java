@@ -197,7 +197,60 @@ programa
 		}
 
 	funcao contaEspecial(real saldo) {
-		
+		real limiteMax = 1000
+		real pedidoEmprestimo
+		real limiteEmprestimo = 1000
+		real pedidoCredito = 0
+		cadeia opcaoPoupanca
+		real debitoPoupanca
+		cadeia opcaoCred
+		cadeia opcaoEmprestimo
+			
+			para (inteiro x = 0; x < 10; x++) {
+
+				escreva("• CONTA EMPRESA \n")
+				escreva("\nPor favor, insira a operação desejada:\n[Débito] / [Crédito] ")
+				leia(opcaoPoupanca)
+
+				se (opcaoPoupanca == "Débito" ou opcaoPoupanca == "débito" ou opcaoPoupanca == "debito" 
+				ou opcaoPoupanca == "deb") {
+					
+					escreva("\nQuanto deseja retirar? R$")
+					leia(debitoPoupanca)
+
+					se (debitoPoupanca <= saldo) {
+						saldo = debito(saldo, debitoPoupanca)
+						escreva("\nO novo saldo é: R$" + saldo + ".\n")
+					} senao {
+						escreva("\nSaldo insuficiente, deseja fazer um empréstimo? (S/N)\n")
+						leia(opcaoEmprestimo)
+
+						se(opcaoEmprestimo == "S" ou opcaoEmprestimo == "Sim" ou opcaoEmprestimo == "s") {
+							escreva("Quanto você quer de empréstimo? [Limite R$", limiteEmprestimo, "]", " R$")
+							leia(pedidoCredito)
+							se(pedidoCredito > limiteEmprestimo) {
+								escreva("Desculpe, seu limite não permite essa transação")
+								}
+							senao {
+								limiteEmprestimo = limiteEmprestimo - pedidoCredito
+								saldo = credito(saldo, pedidoCredito)
+
+								escreva("Seu novo saldo é: R$", saldo, " e o novo limite é: R$", limiteEmprestimo)
+								}
+							
+							}
+					}
+				}
+				senao se(opcaoPoupanca == "Credito" ou opcaoPoupanca == "crédito" ou opcaoPoupanca == "credito" 
+				ou opcaoPoupanca == "cred") {
+					escreva("\nQuanto você deseja de crédito?? R$:")
+					leia(pedidoCredito)
+
+					saldo = credito(saldo, pedidoCredito)
+
+					escreva("Seu saldo agora é: ", saldo)
+					}
+			}
 		}
 
 	funcao contaEmpresa(real saldo) {
@@ -352,8 +405,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4268; 
- * @DOBRAMENTO-CODIGO = [128, 132, 198, 202, 263];
+ * @POSICAO-CURSOR = 5076; 
+ * @DOBRAMENTO-CODIGO = [128, 132, 140, 198, 255, 326, 316, 377, 383];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
