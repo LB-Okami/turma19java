@@ -14,6 +14,7 @@ programa
 		real debitoPoupanca
 		real creditoPoupanca
 
+		faca {
 		estilo()
 		escreva("\n")
 		escreva("\n            •AgiotaBank G7®• \n")
@@ -135,7 +136,7 @@ programa
 			escreva("Obrigado por escolher o AgiotaBank® e volte sempre!")
 				
 		}
-		
+	} enquanto(tipoConta != 6)
 	}
 
 	funcao contaCorrente (real saldo) {
@@ -205,13 +206,14 @@ programa
 		real debitoPoupanca
 		cadeia opcaoCred
 		cadeia opcaoEmprestimo
+		inteiro tipoConta
 			
 			para (inteiro x = 0; x < 10; x++) {
 
-				escreva("• CONTA EMPRESA \n")
-				escreva("\nPor favor, insira a operação desejada:\n[Débito] / [Crédito] ")
+				escreva("• CONTA ESPECIAL | [Digite (sair) para voltar ao menu]\n")
+				escreva("\nPor favor, insira a operação desejada:\n[Débito] / [Crédito]")
 				leia(opcaoPoupanca)
-
+				
 				se (opcaoPoupanca == "Débito" ou opcaoPoupanca == "débito" ou opcaoPoupanca == "debito" 
 				ou opcaoPoupanca == "deb") {
 					
@@ -237,6 +239,7 @@ programa
 
 								escreva("Seu novo saldo é: R$", saldo, " e o novo limite é: R$", limiteEmprestimo)
 								}
+						
 							
 							}
 					}
@@ -405,8 +408,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5076; 
- * @DOBRAMENTO-CODIGO = [128, 132, 140, 198, 255, 326, 316, 377, 383];
+ * @POSICAO-CURSOR = 10916; 
+ * @DOBRAMENTO-CODIGO = [129, 133, 141, 199, 258, 319, 380, 386];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
