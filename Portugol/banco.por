@@ -9,7 +9,7 @@ programa
 		
 	inteiro tipoConta
 		cadeia cpf
-		real saldo = 1000
+		real saldo = 0
 		cadeia opcaoPoupanca
 		real debitoPoupanca
 		real creditoPoupanca
@@ -164,11 +164,9 @@ programa
 		inteiro numeroTalao
 		inteiro contadorTalao = 3
 
-		limpa()
-		escreva("•CONTA CORRENTE | [Digite (sair) para voltar ao menu]\n")
 		para (inteiro y = 0; y < 10; y++) {
 
-				escreva("\nPor favor, insira a operação desejada:\n[Débito] / [Crédito] ")
+				escreva("\nPor favor, insira a operação desejada:\n[Débito] / [Crédito] / [Sair]")
 				leia(opcaoCorrente)
 
 				se (opcaoCorrente == "deb" ou opcaoCorrente == "débito" ou opcaoCorrente == "Débito") {
@@ -241,7 +239,7 @@ programa
 			
 			para (inteiro x = 0; x < 10; x++) {
 
-				escreva("•CONTA ESPECIAL | [Digite (sair) para voltar ao menu]\n")
+				escreva("•CONTA ESPECIAL | [Digite (sair) para voltar ao menu]\n")escreva("•CONTA ESPECIAL | [Digite (sair) para voltar ao menu]\n")
 				escreva("\nPor favor, insira a operação desejada:\n[Débito] / [Crédito] / [Sair]")
 				leia(opcaoPoupanca)
 				
@@ -453,8 +451,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 146; 
- * @DOBRAMENTO-CODIGO = [84, 88, 158, 293, 359, 425, 431, 441, 445];
+ * @POSICAO-CURSOR = 3815; 
+ * @DOBRAMENTO-CODIGO = [84, 88, 291, 357, 423, 429, 439, 443];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
