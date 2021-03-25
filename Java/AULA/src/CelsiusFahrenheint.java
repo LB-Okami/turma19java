@@ -7,12 +7,11 @@ public class CelsiusFahrenheint {
 		double celsius = 0;
 		double fahrenheint = 0;
 		
-		System.out.println("Digite a temperatura em Celsius e eu vou retornar em Fahrenheint: ");
+		System.out.print("Digite a temperatura em Celsius e eu vou retornar em Fahrenheint: ");
 		celsius = leia.nextDouble();
 		
 		fahrenheint = (celsius * 9/5) + 32;
-		
-		System.out.printf("A temperatura é: %.1f", fahrenheint, "°F");
-		
+	
+		System.out.printf("A temperatura é: %.1f°F", fahrenheint);
 	}
 }
