@@ -7,9 +7,6 @@ public class OrdemCrescente {
 		Scanner leia = new Scanner(System.in);
 		
 		int numeros[] = new int[3];
-		int maior = 0;
-		int intermediario = 0;
-		int menor = 0;
 		
 		for(int x =0; x < 3; x++) {
 			System.out.printf("Escreva o %d° número: \n", x+1);
