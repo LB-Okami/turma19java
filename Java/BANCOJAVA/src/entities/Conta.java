@@ -21,9 +21,21 @@ public class Conta {
 		return this.cpf;
 	}
 	
+	public String setCpf(String cpfAlterado) {
+		this.cpf = cpfAlterado;
+		
+		return cpfAlterado;
+	}
+	
 	public double getSaldo() {
 		
 		return this.saldo;
+	}
+	
+	public double setSaldo(int saldoAlterado) {
+		this.saldo = saldoAlterado;
+		
+		return saldoAlterado;
 	}
 	
 	//MÉTODO

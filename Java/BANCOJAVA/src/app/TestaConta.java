@@ -12,7 +12,9 @@ public class TestaConta {
 		contaLucas.debito(4000);
 		System.out.println(contaLucas.getCpf());
 		System.out.println(contaLucas.getSaldo());
-
+		
+		contaLucas.setSaldo(2000);
+		
 	}
 
 }
