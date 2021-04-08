@@ -8,5 +8,4 @@ public class testeFuncionario {
 		
 		System.out.printf("Funcionário %s, portador do ID %s e tem %d anos", Pedro.nome, Pedro.ID, Pedro.idade);
 	}
-
 }
