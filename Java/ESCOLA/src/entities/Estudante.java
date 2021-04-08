@@ -17,12 +17,12 @@ public class Estudante {
 	
 	//Métodos
 	
-	public void adicionarNota(int nota) {
+	public void adicionarNota(double nota) {
 		this.pontos +=  nota;
 		
 	}
 	
-	public void tirarNota(int nota) {
+	public void tirarNota(double nota) {
 		
 		if(pontos >= nota) {
 			this.pontos -=  nota;
@@ -31,7 +31,6 @@ public class Estudante {
 		else if(pontos < nota) {
 			System.out.println("Impossível retirar nota...");
 		}
-		
 	}
 	
 	//Encapsulamento - getters and setters
