@@ -3,10 +3,10 @@ package app;
 import entities.Produto;
 import entities.Revista;
 
-public class Teste {
+public class CadVendas {
 
 	public static void main(String[] args) {
-		Produto fone = new Produto("branco", "532", 23);
+		Revista fone = new Revista("branco", "532", 23, "globo");
 		Revista veja = new Revista("preto", "23", 4040, "Veja");
 		
 		fone.setValorUnitario(45);

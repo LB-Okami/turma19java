@@ -8,12 +8,14 @@ public class Cachorro extends Animal {
 	}
 	
 	//Métodos
-	public void correr() {
-		System.out.println("Este corre muito rapidamente.");
+	@Override
+	public void movimentacao() {
+		System.out.println("Este cachorro corre muito rapidamente.");
 	}
 	
-	public void somCavalo() {
-		System.out.println("Au au");
+	@Override
+	public void fazerSom() {
+		System.out.println("Au Au");
 	}
 
 }

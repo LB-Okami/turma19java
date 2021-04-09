@@ -1,5 +1,8 @@
 package testePOO;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import poo.Animal;
 import poo.Cachorro;
 import poo.Cavalo;
@@ -7,12 +10,18 @@ import poo.Preguica;
 
 public class TesteAnimal {
 	public static void main(String[] args) {
-		Animal cachorro = new Cachorro("princesa", 10, "auau", "corre");
+		
+		List<Animal> animais = new ArrayList<>();
+		
+		
+		animais.add(new Cachorro("princesa", 10, "auau", "corre")); 
 		Animal cavalo = new Cavalo("revista", 7, "*som de cavalo*", "trota");
 		Animal preguica = new Preguica("pedro", 5, "*som de preguiça*", "sobe em árvores");
+		Animal tartaruga = new Animal();
 		
-		System.out.printf("O som do cachorro é: %s \n", cachorro.som);
-		System.out.printf("O som do cavalo é: %s \n", cavalo.som);
-		System.out.printf("O som da preguiça é: %s", preguica.som);
+		for(Animal animal : animais) {
+			System.out.printf("tem %d anos, o seu som é %s e o seu movimento é %s\n", animal.idade, animal.som, animal.movimento);
+		}
+		
 	}
 }

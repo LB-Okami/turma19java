@@ -8,12 +8,14 @@ public class Preguica extends Animal {
 	}
 	
 	//Métodos
-	public void subirArvore() {
-		System.out.println("Este animal sobe em árvores.");
+	@Override
+	public void movimentacao() {
+		System.out.println("Este animal sobe em árvores");
 	}
-	
-	public void somPreguica() {
-		System.out.println("*Som de uma preguiça*");
+		
+	@Override
+	public void fazerSom() {
+		System.out.println("*Som de preguiça.*");
 	}
 
 }

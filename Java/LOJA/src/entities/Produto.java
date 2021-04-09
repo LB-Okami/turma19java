@@ -1,6 +1,6 @@
 package entities;
 
-public class Produto {
+public abstract class Produto {
 	//Atributos
 	private String descricao;
 	private String ID;
