@@ -1,29 +1,32 @@
 package app;
 import java.util.Scanner;
 
-import entities.Basico;
-import entities.Estudante;
+import entities.Graduacao;
+import entities.Medio;
 
 public class CadEstudante {
 	
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
 		String nome;
-		int mat;
+		int matricula;
 		
-		System.out.println("nome");
-		nome = leia.next();
+		Graduacao Lucas = new Graduacao("Lucas", 2224);
+		Medio Leandro = new Medio("539392", 6, 9);
 		
-		System.out.println("mat");
-		mat = leia.nextInt();
+		System.out.println(Lucas.getPontos());
 		
-		Basico Lucas = new Basico(nome, mat, 5);
+		Lucas.adicionarNota(-1);
 		
-		Lucas.setDiaAniversario(28);
+		System.out.println(Lucas.getPontos());
 		
-		Lucas.bonusAniversario(28);
+		if(Lucas.getPontos() < 0) {
+			Lucas.usarBonus(2);
+		}
+		System.out.println(Lucas.getPontos());
 		
-		System.out.printf("O aluno %s, portador da matrícula %d, está com nota %.1f", nome, mat, Lucas.getPontos());
+		System.out.println(Lucas.getBonus());
+		
 	}
 
 }
