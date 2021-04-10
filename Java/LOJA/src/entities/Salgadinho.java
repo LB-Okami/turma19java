@@ -1,10 +1,10 @@
 package entities;
 
-public class Roupa extends Produto {
+public class Salgadinho extends Produto {
 	
 	private String marca;
 
-	public Roupa(String descricao, String iD, double valorUnitario, String marca) {
+	public Salgadinho(String descricao, String iD, double valorUnitario, String marca) {
 		super(descricao, iD, valorUnitario);
 		this.marca = marca;
 	}

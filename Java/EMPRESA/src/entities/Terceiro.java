@@ -3,6 +3,7 @@ package entities;
 public class Terceiro extends Funcionario {
 	private double adicional;
 	
+	
 	//Construtores
 	public Terceiro(String nome, String ID) {
 		super(nome, ID);
@@ -25,6 +26,7 @@ public class Terceiro extends Funcionario {
 	//Métodos
 	@Override
 	public double salario() {
+		horaTrabalhada = idade;
 		return (horaTrabalhada * valorHora) + adicional;
 	}
 	

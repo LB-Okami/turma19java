@@ -3,7 +3,7 @@ package entities;
 public class Funcionario {
 	private String nome;
 	private String ID;
-	private int idade;
+	protected int idade;
 	protected int horaTrabalhada;
 	protected double valorHora = 40;
 	
