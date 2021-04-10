@@ -3,45 +3,51 @@ package entities;
 public abstract class Produto {
 	//Atributos
 	private String descricao;
-	private String ID;
+	private String codigo;
 	private double valorUnitario;
-	private int quantEstoque = 0;
-	
+	private int quantEstoque = 10;
 	
 	//Construtor 
-	public Produto(String descricao, String iD, double valorUnitario) {
+	public Produto(String descricao, String codigo, double valorUnitario) {
 		super();
 		this.descricao = descricao;
-		ID = iD; 
+		this.codigo = codigo; 
 		this.valorUnitario = valorUnitario;
 	}
 	//Construtor com sobrecarga
-	public Produto(String descricao, String iD) {
+	public Produto(String descricao, String codigo, double valorUnitario, int quantEstoque) {
 		super();
 		this.descricao = descricao;
-		ID = iD;
+		this.codigo = codigo;
+		this.valorUnitario = valorUnitario;
+		this.quantEstoque = quantEstoque;
+	}
+	
+	public Produto(String descricao, String codigo) {
+		super();
+		this.descricao = descricao;
+		this.codigo = codigo;
 	}
 
-	
-	
 	//Encapsulamento - getters & setters
 	public String getDescricao() {
 		return descricao;
 	}
 
 
+	
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 
 
-	public String getID() {
-		return ID;
+	public String getCodigo() {
+		return codigo;
 	}
 
 	/*
-	 public void setID(String ID) {
-		this.ID = ID;
+	 public void setCodigo(String codigo) {
+		this.codigo = codigo;
 	}
 	*/
 
@@ -68,14 +74,14 @@ public abstract class Produto {
 	
 	//Métodos
 	public void incluirEstoque(int valorInserido) {
-		quantEstoque += valorInserido;
+		this.quantEstoque += valorInserido;
 		
 	}
 	
 	public void retirarEstoque(int valorInserido) {
 		
 		if(quantEstoque >= valorInserido) {
-			quantEstoque -= valorInserido;
+			this.quantEstoque -= valorInserido;
 		}
 		else if(quantEstoque < valorInserido) {
 			System.out.println("Infelizmente o estoque deste produto acabou...");

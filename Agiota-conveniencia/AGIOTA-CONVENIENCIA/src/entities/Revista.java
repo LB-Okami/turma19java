@@ -1,16 +1,21 @@
 package entities;
 
 public class Revista extends Produto {
-	
+	private String editora;
 
 	
 
-	public Revista(String descricao, String iD, double valorUnitario) {
-		super(descricao, iD, valorUnitario);
-		// TODO Auto-generated constructor stub
+	public Revista(String descricao, String codigo, double valorUnitario) {
+		super(descricao, codigo, valorUnitario);
+		
+	}
+	
+	public Revista(String descricao, String codigo, double valorUnitario, int quantEstoque, String editora) {
+		super(descricao, codigo, valorUnitario);
+		this.editora = editora;
 	}
 
-	private String editora;
+	   
 
 	//Encapsulamento - Getters and setters
 	
