@@ -22,6 +22,32 @@ select * from tb_produtos;
 alter table tb_produtos add descricao varchar(255);
 
 
-delete from tb_produtos where id = 6;
+delete from tb_produtos where id = 10;
 
 update tb_produtos set preco = 10 where id = 9;
+
+use db_estoque;
+
+create table tb_marcas(
+	id bigint auto_increment,
+    nome varchar(255) not null,
+    ativo boolean,
+    primary key(id)
+    
+);
+
+create table tb_produtos(
+	id bigint auto_increment,
+    nome varchar(50) not null,
+    preco decimal(10,2),
+    marca_id bigint not null, 
+	primary key(id),
+    foreign key(marca_id) references tb_marcas (id)
+    
+);
+
+insert into tb_produtos (nome, preco, marca_id) values ("Tênis", 200, 9);
+
+select * from tb_produtos where preco > 100;
+
+
