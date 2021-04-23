@@ -1,15 +1,19 @@
+use db_pizzaria_legal;
+
 create table tb_categoria(
 	id bigint auto_increment,
     delivery boolean,
     tempo tinyint not null, -- em minutos 
+    estoque boolean,
+    caixa_reciclavel boolean,
     primary key(id)
 );
 
-	insert tb_categoria(delivery, tempo) values (true, 40);
-    insert tb_categoria(delivery, tempo) values (true, 50);
-    insert tb_categoria(delivery, tempo) values (false, 45);
-    insert tb_categoria(delivery, tempo) values (true, 40);
-    insert tb_categoria(delivery, tempo) values (false, 30);
+	insert tb_categoria(delivery, tempo, estoque, caixa_reciclavel) values (true, 40, true, false);
+    insert tb_categoria(delivery, tempo, estoque, caixa_reciclavel) values (true, 50, true, true);
+    insert tb_categoria(delivery, tempo, estoque, caixa_reciclavel) values (false, 45, true, false);
+    insert tb_categoria(delivery, tempo, estoque, caixa_reciclavel) values (true, 40, true, true);
+    insert tb_categoria(delivery, tempo, estoque, caixa_reciclavel) values (false, 30, true, false);
 
 create table tb_pizza(
 	id bigint auto_increment,
