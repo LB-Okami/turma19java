@@ -1,15 +1,16 @@
-package com.hellowrld.hello.controller;
+package com.mentalidades.mentalidades.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/hello")
-public class HelloController {
-	
+@RequestMapping("/mentalidades")
+public class MentalidadeController {
+
 	@GetMapping
-	public String ola () {
-		return "Olá mundo";
+	public String mentalidades() {
+		
+		return "Orientação ao futuro, persistência";
 	}
- }
+}
