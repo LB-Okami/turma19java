@@ -22,11 +22,11 @@ public class TemaLifeLarning {
 	private String titulo;
 	
 	@NotNull
-	@Size(min = 2, max = 500)
+	@Size(min = 2)
 	private String sumario;
 	
 	@NotNull
-	@Size(min = 2, max = 500)
+	@Size(min = 2)
 	private String tag;
 
 	public long getId() {
