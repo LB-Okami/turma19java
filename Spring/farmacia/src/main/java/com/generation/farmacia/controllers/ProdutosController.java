@@ -21,7 +21,7 @@ import com.generation.farmacia.repository.ProdutosRepository;
 
 @RestController // Define um controller
 @RequestMapping("/produtos") // Define o caminho
-@CrossOrigin("*") // Define de qual origem irá aceitar
+@CrossOrigin(origins = "*", allowedHeaders = "*") // Define de qual origem irá aceitar
 public class ProdutosController {
 	
 	@Autowired

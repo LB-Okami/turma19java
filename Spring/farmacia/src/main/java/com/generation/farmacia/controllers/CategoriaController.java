@@ -19,7 +19,7 @@ import com.generation.farmacia.repository.CategoriaRepository;
 
 @RestController // Define um controller
 @RequestMapping("/categoria") // Define o caminho
-@CrossOrigin("*") // Define de qual origem irá aceitar
+@CrossOrigin(origins = "*", allowedHeaders = "*") // Define de qual origem irá aceitar
 public class CategoriaController {
 	
 	@Autowired

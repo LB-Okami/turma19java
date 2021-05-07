@@ -19,7 +19,7 @@ import com.gamesMercury.LojaMercury.repository.ProdutosRepository;
 
 @RestController // define o controller
 @RequestMapping("/produtos") // define a URI
-@CrossOrigin("*") // Define por quem pode ser acessado
+@CrossOrigin(origins = "*", allowedHeaders = "*") // Define por quem pode ser acessado
 public class ProdutosController {
 	
 	@Autowired

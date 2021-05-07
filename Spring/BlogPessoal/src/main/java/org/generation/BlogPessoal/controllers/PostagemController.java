@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController // define um controller
 @RequestMapping("/postagens")
-@CrossOrigin("*") // recebe de qualquer coisa
+@CrossOrigin(origins = "*", allowedHeaders = "*") // recebe de qualquer coisa
 public class PostagemController {
 	
 	@Autowired

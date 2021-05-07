@@ -20,7 +20,7 @@ import com.gamesMercury.LojaMercury.repository.CategoriaRepository;
 
 @RestController // Define o controller
 @RequestMapping("/categoria") // Define o caminho
-@CrossOrigin("*") // Define quem pode acessar
+@CrossOrigin(origins = "*", allowedHeaders = "*") // Define quem pode acessar
 public class CategoriaController {
 
 	@Autowired // define a instância do repository
