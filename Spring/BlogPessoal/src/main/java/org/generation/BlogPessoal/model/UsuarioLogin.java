@@ -1,5 +1,6 @@
 package org.generation.BlogPessoal.model;
 
+
 public class UsuarioLogin {
 	
 	private String nome;

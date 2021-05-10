@@ -27,7 +27,13 @@ public class Usuario {
 	@NotNull
 	@Size(min = 6)
 	private String senha;
+	
+	@NotNull
+	private int idade;
+	
+	private boolean maiorIdade;
 
+	
 	public long getId() {
 		return id;
 	}
@@ -60,5 +66,21 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	public boolean isMaiorIdade() {
+		return maiorIdade;
+	}
+
+	public void setMaiorIdade(boolean maiorIdade) {
+		this.maiorIdade = maiorIdade;
+	}
+
 	
 }
