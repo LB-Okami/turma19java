@@ -1,20 +1,20 @@
 package org.generation.BlogPessoal.seguranca;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.generation.BlogPessoal.model.Usuario;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javassist.SerialVersionUID;
-
 // Funciona como uma model para cadastros de usuários
 public class UserDetailsImplementation implements UserDetails{
 
-	private static final long SerialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	
 	private String userName;
 	private String password;
+	private List<GrantedAuthority> authorities;
 	
 	public UserDetailsImplementation (Usuario user) {
 		this.userName = user.getUsuario();
@@ -26,7 +26,7 @@ public class UserDetailsImplementation implements UserDetails{
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
-		return null;
+		return authorities;
 	}
 
 	@Override

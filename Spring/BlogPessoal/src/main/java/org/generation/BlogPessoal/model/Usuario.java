@@ -29,6 +29,10 @@ public class Usuario {
 	private String senha;
 	
 	@NotNull
+	@Size(min = 2, max = 250)
+	private String email;
+	
+	@NotNull
 	private int idade;
 	
 	private boolean maiorIdade;
@@ -80,6 +84,14 @@ public class Usuario {
 
 	public void setMaiorIdade(boolean maiorIdade) {
 		this.maiorIdade = maiorIdade;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	

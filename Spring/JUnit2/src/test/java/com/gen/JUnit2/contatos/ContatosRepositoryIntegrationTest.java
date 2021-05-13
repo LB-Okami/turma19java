@@ -1,5 +1,6 @@
 package com.gen.JUnit2.contatos;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +22,23 @@ public class ContatosRepositoryIntegrationTest {
 	
 	@Before
 	public void start() {
-		contato = new ContatoModel("Lucas", "3665482154", "11856452254");
+		contato = new ContatoModel("Lucas Buzo", "3665482154", "11856452254");
+		
+		
+		contato = new ContatoModel("Pedro Aguiar", "854753214", "51986521452");
+		
+		
+		contato = new ContatoModel("Lucas Silva", "56328428", "11985632542");
+		
+		
+		contato = new ContatoModel("Ana Clara", "366189625256", "81547258315");
+	}
+	
+	@Test
+	public void findByNomeRetornaContato() throws Exception{
+		ContatoModel contato = contatoRepository.findFirstByNome("Lucas");
+
+		Assert.assertTrue(contato.getCpf().equals("366"));
 	}
 	
 	@Test(expected = RuntimeException.class)
