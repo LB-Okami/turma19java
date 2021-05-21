@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-size: 95%;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    
+}
+
+ul > li > a {
+    color: black;
+    margin-right: 2rem;
+    font-size: large;
+}
+
+/* Body */ 
+#form > h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+form {
+    margin-left: 51rem;
+    margin-top: 2rem;
+    
+}

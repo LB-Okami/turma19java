@@ -1,0 +1,110 @@
+:root {
+    --brown: #937666;
+    --rock: #AB8C6D;
+    --redBrown: #AB7A6D;
+    --dirt: #A18B67
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    background-color: var(--dirt);
+}
+
+/* Header */
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.1rem;
+    margin-right: 5.5rem;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#nav > ul{
+    display: flex;
+    list-style: none;
+    font-size: small;
+    align-content: center;
+}
+
+#nav > ul > li {
+    margin-right: 3rem;
+}
+
+.lista {
+    display: flex;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: medium;
+}
+
+a:hover {
+    color: white;
+}
+
+/* Body */
+.descricao {
+    display: flex;
+    max-width: 70rem;
+    padding: 1rem;
+}
+
+#reiner {
+    display: flex;
+    align-items: flex-end;
+    margin-right: -5rem;
+}
+
+
+#japanName {
+    margin-bottom: 2rem;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 14rem;
+}
+
+.borda {
+    border: 3px solid black;
+    max-width: 1200px;
+    margin-left: 18rem;
+}
+
+#braun {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 8rem;
+    margin-bottom: 0.8rem;
+}
+
+#textos {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    align-items: center;
+}
+
+.video > h2 {
+    margin-bottom: 2rem;
+}
+
