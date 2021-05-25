@@ -6,7 +6,7 @@ por classe = getElementsByClassName()
 por seletor = querySelector()
 */
 
-let nome = document.getElementById("#nome")
+let nome = document.getElementById("nome")
 let email = document.querySelector("#email")
 let assunto = document.querySelector("#assunto")
 let mapa = document.querySelector("#mapa")
