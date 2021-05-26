@@ -1,0 +1,32 @@
+ul.social-network {
+    list-style: none;
+}
+
+.fab {
+    color: white;
+    transition: 0.3s;
+}
+
+.fa-github:hover {
+}
+
+.fa-linkedin:hover {
+    color: #0072b1;
+}
+
+.fa-instagram:hover {
+    color: #C13584;
+}
+
+.copyright-color {
+    background-color: black;
+}
+
+.copyright {
+    color: white;
+    transition: 0.2s;
+}
+
+.copyright:hover {
+    color: #0072b1;
+}
