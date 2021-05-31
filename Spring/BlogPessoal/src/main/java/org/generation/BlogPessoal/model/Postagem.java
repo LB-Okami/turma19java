@@ -1,12 +1,15 @@
 package org.generation.BlogPessoal.model;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -38,6 +41,10 @@ public class Postagem {
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
 
+	@ManyToOne
+	@JsonIgnoreProperties("usuario")
+	private Usuario usuario;
+	
 	public Tema getTema() {
 		return tema;
 	}
@@ -69,5 +76,11 @@ public class Postagem {
 		this.data = data;
 	}
 	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	
 }

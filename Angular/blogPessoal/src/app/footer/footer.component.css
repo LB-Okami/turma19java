@@ -30,3 +30,7 @@ ul.social-network {
 .copyright:hover {
     color: #0072b1;
 }
+
+hr {
+    color: pink;
+}

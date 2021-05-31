@@ -1,12 +1,18 @@
 package org.generation.BlogPessoal.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_usuario")
@@ -21,22 +27,23 @@ public class Usuario {
 	private String nome;
 	
 	@NotNull
-	@Size(min = 5, max = 100)
+	@Size(min = 2, max = 100)
 	private String usuario;
 	
 	@NotNull
 	@Size(min = 6)
 	private String senha;
 	
-	@NotNull
+	private String foto;
+	
+	private String tipo;
+
 	@Size(min = 2, max = 250)
 	private String email;
-	
-	@NotNull
-	private int idade;
-	
-	private boolean maiorIdade;
 
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("usuario")
+	private List<Postagem> postagem;
 	
 	public long getId() {
 		return id;
@@ -70,22 +77,6 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
-	public int getIdade() {
-		return idade;
-	}
-
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
-
-	public boolean isMaiorIdade() {
-		return maiorIdade;
-	}
-
-	public void setMaiorIdade(boolean maiorIdade) {
-		this.maiorIdade = maiorIdade;
-	}
-	
 	public String getEmail() {
 		return email;
 	}
@@ -93,6 +84,31 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
+	}
+
 
 	
 }

@@ -13,20 +13,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UsuarioService {
-	
+
 	@Autowired
 	private UsuarioRepository repository;
-	
-	public Optional<Usuario> CadastrarUsuario(Usuario usuario) { // Se encarrega de encriptar a senha e passar ela pro banco através do set
+
+	public Optional<Usuario> CadastrarUsuario(Usuario usuario) {
 		
-		if(usuario.getIdade() >= 18) {
-			usuario.setMaiorIdade(true);
-		}
-		else if(usuario.getIdade() < 18) {
-			usuario.setMaiorIdade(false);
-		}
-		
-		if(repository.findByEmail(usuario.getEmail()).isPresent())
+		if(repository.findByUsuario(usuario.getUsuario()).isPresent())
 			return null;
 		
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -36,29 +29,30 @@ public class UsuarioService {
 
 		return Optional.of(repository.save(usuario));
 	}
-	
-	public Optional<UsuarioLogin> Logar (Optional<UsuarioLogin> user) {
+
+	public Optional<UsuarioLogin> Logar(Optional<UsuarioLogin> user) {
+
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		
-		Optional<Usuario> usuario = repository.findByEmail(user.get().getEmail()); // pesquisa o nome do usuario
-		
-		if(usuario.isPresent()) {
-			if(encoder.matches(user.get().getSenha(), usuario.get().getSenha())) {
-				
-				String auth = user.get().getEmail() + ":" + user.get().getSenha(); 
+		Optional<Usuario> usuario = repository.findByUsuario(user.get().getUsuario());
+
+		if (usuario.isPresent()) {
+			if (encoder.matches(user.get().getSenha(), usuario.get().getSenha())) {
+
+				String auth = user.get().getUsuario() + ":" + user.get().getSenha();
 				byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
 				String authHeader = "Basic " + new String(encodedAuth);
-				
+
 				user.get().setToken(authHeader);
-				user.get().setNome(usuario.get().getEmail());
-				user.get().setNome(usuario.get().getSenha());
-				
-				
+				user.get().setId(usuario.get().getId());
+				user.get().setNome(usuario.get().getNome());
+				user.get().setSenha(usuario.get().getSenha());
+				user.get().setFoto(usuario.get().getFoto());
+				user.get().setTipo(usuario.get().getTipo());
+
 				return user;
-				
+
 			}
 		}
 		return null;
 	}
-	
 }
