@@ -1,13 +1,13 @@
-import { environment } from 'src/environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-theme',
+  templateUrl: './theme.component.html',
+  styleUrls: ['./theme.component.css']
 })
-export class HomeComponent implements OnInit {
+export class ThemeComponent implements OnInit {
 
   constructor(
     private router: Router
