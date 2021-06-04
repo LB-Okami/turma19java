@@ -13,17 +13,21 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { ThemeComponent } from './theme/theme.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     MenuComponent,
     FooterComponent,
     LoginComponent,
     SignUpComponent,
     HomeComponent,
-      ThemeComponent
+      ThemeComponent,
+      TemaEditComponent,
+      TemaDeleteComponent
    ],
   imports: [
     BrowserModule,

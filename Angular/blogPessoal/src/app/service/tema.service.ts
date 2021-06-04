@@ -21,8 +21,19 @@ constructor(
     return this.http.get<Tema[]>(`${environment.server}/tema`, this.tokens)
   }
 
+  getByIdTema(id: number): Observable<Tema> {
+    return this.http.get<Tema>(`${environment.server}/tema/${id}`, this.tokens)
+  }
+
   postTema(tema: Tema): Observable<Tema> {
     return this.http.post<Tema>(`${environment.server}/tema`, tema, this.tokens)
   }
 
+  putTema(tema: Tema): Observable<Tema> {
+    return this.http.put<Tema>(`${environment.server}/tema`, tema, this.tokens)
+  }
+
+  deleteTema(id: number) {
+    return this.http.delete(`${environment.server}/tema/delete/${id}`, this.tokens)
+  }
 }

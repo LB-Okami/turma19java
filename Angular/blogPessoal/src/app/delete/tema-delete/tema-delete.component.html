@@ -1,0 +1,34 @@
+<div class="container-fluid me-0 ms-0 bg-dark d-flex align-items-center" style="height: 70vh;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center text-white mb-5">Apagar Tema</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <h5 class="text-white text-center">Tem certeza que deseja apagar esse tema? Todas as postagens que estiverem relacionadas ao tema irão ser igualmente deletadas.</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h5 class="text-white text-center mb-2">Tema: {{tema.descricao}}</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center mt-3">
+        <button class="btn btn-primary me-4 text-white" routerLink='/theme'>Cancelar</button>
+        <button class="btn btn-danger" (click)='apagar()'>Deletar</button>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-12 d-flex justify-content-center">
+        <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/1/14/You%27re_Next_Emote.png/revision/latest?cb=20171120233607" alt="imagem do darius">
+      </div>
+    </div>
+  </div>
+</div>
