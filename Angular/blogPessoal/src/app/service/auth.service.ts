@@ -21,6 +21,10 @@ export class AuthService {
     return this.http.post<User>(`${environment.server}/usuario/cadastrar`, user)
   }
 
+  getByIdUser(id: number): Observable<User> {
+    return this.http.get<User>(`${environment.server}/usuario/${id}`)
+  }
+
   logado() {
     let ok = false
 
@@ -30,4 +34,6 @@ export class AuthService {
 
     return ok
   }
+
+
 }
